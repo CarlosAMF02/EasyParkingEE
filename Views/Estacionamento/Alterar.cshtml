@@ -1,0 +1,24 @@
+﻿@using WebAppGlobal.ViewModels
+@model EstacionamentoVM
+
+<form class="mt-2" asp-action="Alterar">
+    <input type="hidden" asp-for="Id" />
+    <div class="mb-3 row">
+        <label for="inputNome" class="col-sm-2 col-form-label">Nome:</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="inputNome" asp-for="Nome">
+        </div>
+    </div>
+
+    <div class="mb-3 row">
+        <label for="inputEnderecoId" class="col-sm-2 col-form-label">Código do Endereço:</label>
+        <div class="col-sm-10">
+            <input type="number" class="form-control" id="inputEnderecoId" asp-for="EnderecoId">
+        </div>
+    </div>
+    
+
+    <button type="submit" class="btn btn-secondary">Editar</button>
+    <a class="mt-2" asp-action="Listar">Voltar para Lista</a>
+</form>
+

@@ -1,0 +1,23 @@
+﻿@model IEnumerable<Vaga>
+
+<div class="mt-2">
+    <a type="button" class="btn btn-secondary" asp-area="" asp-controller="Vaga" asp-action="Criar">Cadastrar Vaga</a>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        @foreach (var vaga in Model)
+        {
+            <div class="card mt-5 mx-2" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">@vaga.Nome</h5>
+                    <p class="card-text">Código da Vaga: @vaga.Id</p>
+                    <p class="card-text">Andar da Vaga: @vaga.Andar</p>
+                    <p class="card-text">Status da Vaga: @vaga.Status</p>
+                    <p class="card-text">Código do Estacionamento: @vaga.Estacionamento.Id</p>
+                    <p class="card-text">Nome do Estacionamento: @vaga.Estacionamento.Nome</p>
+                    <a asp-action="Alterar" asp-route-id="@vaga.Id">Editar</a>
+                    <a asp-action="Deletar" asp-route-id="@vaga.Id">Remover</a>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+

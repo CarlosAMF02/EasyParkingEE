@@ -1,0 +1,37 @@
+﻿@using WebAppGlobal.ViewModels
+@model VagaVM 
+
+<form class="mt-2" asp-action="Criar">
+
+    <div class="mb-3 row">
+        <label for="inputNome" class="col-sm-2 col-form-label">Nome:</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="inputNome" asp-for="Nome">
+        </div>
+    </div>
+
+    <div class="mb-3 row">
+        <label for="inputAndar" class="col-sm-2 col-form-label">Andar:</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="inputNome" asp-for="Andar">
+        </div>
+    </div>
+
+    <div class="mb-3 row">
+        <label for="inputStatus" class="col-sm-2 col-form-label">Status:</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="inputStatus" asp-for="Status">
+        </div>
+    </div>
+
+    <div class="mb-3 row">
+        <label for="inputEstacionamentoId" class="col-sm-2 col-form-label">Código do Estacionamento:</label>
+        <div class="col-sm-10">
+            <input type="number" class="form-control" id="inputEstacionamentoId" asp-for="EstacionamentoId">
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-secondary">Cadastrar</button>
+    <a class="mt-2" asp-action="Listar">Voltar para Lista</a>
+</form>
+

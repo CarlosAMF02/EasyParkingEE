@@ -1,0 +1,28 @@
+﻿@model Estacionamento
+
+<form class="mt-2" asp-action="Deletar">
+    <div class="mt-3">
+        <div class="mb-3 row">
+            <p>@Html.DisplayNameFor(model => model.Nome): @Html.DisplayFor(model => model.Nome)</p>
+        </div>
+
+        <div class="mb-3 row">
+            <p>Código do Endereço: @Html.DisplayFor(model => model.Endereco.Id)</p>
+        </div>
+
+        <div class="mb-3 row">
+            <p>@Html.DisplayNameFor(model => model.Endereco.Rua): @Html.DisplayFor(model => model.Endereco.Rua)</p>
+        </div>
+
+        <div class="mb-3 row">
+            <p>@Html.DisplayNameFor(model => model.Endereco.Cidade): @Html.DisplayFor(model => model.Endereco.Cidade)</p>
+        </div>
+
+        <div class="mb-3 row">
+            <p>@Html.DisplayNameFor(model => model.Endereco.Estado): @Html.DisplayFor(model => model.Endereco.Estado)</p>
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-danger">Remover</button>
+    <a class="mt-2" asp-action="Listar">Voltar para Lista</a>
+</form>

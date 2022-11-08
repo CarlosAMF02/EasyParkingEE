@@ -1,0 +1,44 @@
+﻿@model Endereco
+
+<form class="mt-2" asp-action="Alterar">
+    <input type="hidden" asp-for="Id" />
+    <div class="mb-3 row">
+        <label for="inputRua" class="col-sm-2 col-form-label">Rua:</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="inputRua" asp-for="Rua">
+        </div>
+    </div>
+
+    <div class="mb-3 row">
+        <label for="inputBairro" class="col-sm-2 col-form-label">Bairro:</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="inputNome" asp-for="Bairro">
+        </div>
+    </div>
+
+    <div class="mb-3 row">
+        <label for="ínputNumero" class="col-sm-2 col-form-label">Número:</label>
+        <div class="col-sm-10">
+            <input type="number" class="form-control" id="ínputNumero" asp-for="Numero">
+        </div>
+    </div>
+
+    <div class="mb-3 row">
+        <label for="inputCidade" class="col-sm-2 col-form-label">Cidade:</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="inputCidade" asp-for="Cidade">
+        </div>
+    </div>
+
+    <div class="mb-3 row">
+        <label for="inputEstado" class="col-sm-2 col-form-label">Estado:</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="inputEstado" asp-for="Estado">
+        </div>
+    </div>
+    
+
+    <button type="submit" class="btn btn-secondary">Editar</button>
+    <a class="mt-2" asp-action="Listar">Voltar para Lista</a>
+</form>
+

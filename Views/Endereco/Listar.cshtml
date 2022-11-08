@@ -1,0 +1,23 @@
+﻿@model IEnumerable<Endereco>
+
+<div class="mt-2">
+    <a type="button" class="btn btn-secondary" asp-area="" asp-controller="Endereco" asp-action="Criar">Cadastrar Endereço</a>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        @foreach (var endereco in Model)
+        {
+            <div class="card mt-5 mx-2" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">@endereco.Rua</h5>
+                    <p class="card-text">Código: @endereco.Id</p>
+                    <p class="card-text">Bairro: @endereco.Bairro</p>
+                    <p class="card-text">Número: @endereco.Numero</p>
+                    <p class="card-text">Cidade: @endereco.Cidade</p>
+                    <p class="card-text">Estado: @endereco.Estado</p>
+                    <a asp-action="Alterar" asp-route-id="@endereco.Id">Editar</a>
+                    <a asp-action="Deletar" asp-route-id="@endereco.Id">Remover</a>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
